@@ -5,7 +5,7 @@ import requests
 import asyncio
 
 from wallets.wallet_creation import wallet
-from mint_bodies import *
+from laba5.mint_bodies import *
 
 URL = "https://ton.org/testnet-global.config.json"
 
