@@ -6,6 +6,7 @@ mnemonics = ['ridge', 'vote', 'flip', 'office', 'that', 'scissors', 'earn', 'esc
              'destroy', 'flower', 'fat', 'major', 'column']
 
 mnemonics, public_key, private_key, wallet = Wallets.from_mnemonics(mnemonics=mnemonics, version=WalletVersionEnum.v3r2, workchain=0)
+wallet_address = wallet.address.to_string(True, True, True, True)
 
 if __name__ == "__main__":
     print(mnemonics)

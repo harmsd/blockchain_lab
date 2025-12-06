@@ -7,7 +7,7 @@ import requests
 from wallets.new_wallet_creation import new_wallet, mnemonics
 from wallets.wallet_creation import wallet, mnemonics
 
-from mint_bodies import create_state_init_jetton
+from mint_bodies import create_state_init_jetton, increase_supply, change_owner
 
 URL = "https://ton.org/testnet-global.config.json"
 
@@ -53,6 +53,40 @@ class Deployes:
         transfer_message = transfer_query['message'].to_boc(False)
 
         await self.client.raw_send_message(transfer_message)
+
+    async def mint_tokens(self):
+        await self.client.init()
+        data = await self.client.raw_run_method(method='seqno', stack_data=[], address=wallet.address.to_string(True, True, True, True))
+        self.seqno = int(data['stack'][0][1], 16)
+
+        body = increase_supply()
+        state_init, jetton_address = create_state_init_jetton()
+
+
+        transfer_query = wallet.create_transfer_message(to_addr=jetton_address, amount=to_nano(0.05, 'ton'), 
+                seqno=self.seqno, payload=body)
+
+        transfer_message = transfer_query['message'].to_boc(False)
+
+        await self.client.raw_send_message(transfer_message)
+
+
+    async def change_admin(self):
+        await self.client.init()
+        data = await self.client.raw_run_method(method='seqno', stack_data=[], address=wallet.address.to_string(True, True, True, True))
+        self.seqno = int(data['stack'][0][1], 16)
+
+        body = change_owner()
+        state_init, jetton_address = create_state_init_jetton()
+
+
+        transfer_query = wallet.create_transfer_message(to_addr=jetton_address, amount=to_nano(0.05, 'ton'), 
+                seqno=self.seqno, payload=body)
+
+        transfer_message = transfer_query['message'].to_boc(False)
+
+        await self.client.raw_send_message(transfer_message)
+    
 
 
 
