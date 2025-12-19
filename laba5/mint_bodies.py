@@ -1,7 +1,7 @@
 from tonsdk.contract.token.ft import JettonMinter, JettonWallet
 from tonsdk.utils import Address, to_nano
 
-address = '0QCaMK2ZLSB17ZewOiIwzE54R--epHZ2SFGhwbN1lF-kFdH5'
+address = '0QDfHyHSMp5GmSSMEnKVZg1jh-MfvyZhKZmWDILCpUF5avbl'
 content = 'https://raw.githubusercontent.com/harmsd/blockchain_lab/refs/heads/master/laba5/token_data.json'
 
 

@@ -79,8 +79,7 @@ class Deployes:
         body = change_owner()
         state_init, jetton_address = create_state_init_jetton()
 
-
-        transfer_query = wallet.create_transfer_message(to_addr=jetton_address, amount=to_nano(0.05, 'ton'), 
+        transfer_query = wallet.create_transfer_message(to_addr="kQCaMK2ZLSB17ZewOiIwzE54R--epHZ2SFGhwbN1lF-kFYw8", amount=to_nano(0.05, 'ton'), 
                 seqno=self.seqno, payload=body)
 
         transfer_message = transfer_query['message'].to_boc(False)

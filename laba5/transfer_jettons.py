@@ -41,7 +41,7 @@ async def tontools_transfer():
     #                              jettons_amount=1000)
 
     await wallet.transfer_jetton_by_jetton_wallet(destination_address='EQCD39VS5jcptHL8vMjEXrzGaRcCVYto7HUn4bpAOg8xqB2N',
-                                                  jetton_wallet='EQCzBogP_bYYIPydqqnej7TKp8Ui5HNJgLFczBZBj7MiZZFO',
+                                                  jetton_wallet='0QCaMK2ZLSB17ZewOiIwzE54R--epHZ2SFGhwbN1lF-kFdH5',
                                                   jettons_amount=1500)
 
 

@@ -8,3 +8,4 @@ def get_wallet_from_mnemonics(mnemonics):
 
 if __name__ == "__main__":
     print(new_wallet.address.to_string(True, True, True, True))
+    print(mnemonics)
