@@ -6,7 +6,7 @@ from deploy import Deployes
 
 async def main():
     deploy = Deployes()
-    await deploy.deploy_minter()
+    await deploy.mint_tokens()
 
 if __name__ == "__main__":
     asyncio.run(main())

@@ -57,10 +57,10 @@ async def burn():
         jetton_amount=to_nano(50000, 'ton'),
     )
 
-    query = wallet.create_transfer_message(to_addr='0QDfHyHSMp5GmSSMEnKVZg1jh-MfvyZhKZmWDILCpUF5avbl', amount=to_nano(0.05, 'ton'), seqno=seqno, payload=body)
+    query = wallet.create_transfer_message(to_addr='0QDD5xF0VW14U1KYxxBDitiVl3z_N__MpzyP1DpWerLMD8up', amount=to_nano(0.05, 'ton'), seqno=seqno, payload=body)
 
     await client.raw_send_message(query["message"].to_boc(False))
-    
+
 
 if __name__ == "__main__":
     asyncio.run(burn())

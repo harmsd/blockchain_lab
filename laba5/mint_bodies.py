@@ -1,7 +1,10 @@
 from tonsdk.contract.token.ft import JettonMinter, JettonWallet
 from tonsdk.utils import Address, to_nano
+from wallets.new_wallet_creation import new_wallet
 
-address = '0QDfHyHSMp5GmSSMEnKVZg1jh-MfvyZhKZmWDILCpUF5avbl'
+# address = new_wallet.address.to_string(True, True, True, True)
+# ['defy', 'govern', 'theme', 'fox', 'major', 'found', 'dumb', 'sea', 'garage', 'cigar', 'build', 'coin', 'nominee', 'employ', 'column', 'glass', 'cash', 'symbol', 'bench', 'rifle', 'office', 'puzzle', 'prefer', 'hire']
+address = "kQDD5xF0VW14U1KYxxBDitiVl3z_N__MpzyP1DpWerLMD5Zs"
 content = 'https://raw.githubusercontent.com/harmsd/blockchain_lab/refs/heads/master/laba5/token_data.json'
 
 

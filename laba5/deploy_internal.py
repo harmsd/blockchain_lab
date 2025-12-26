@@ -6,7 +6,7 @@ import asyncio
 import webbrowser
 
 from wallets.new_wallet_creation import new_wallet, mnemonics
-from wallets.wallet_creation import wallet, mnemonics
+from wallets.wallet_creation import wallet
 
 async def get_seqno(client: TonlibClient, address: str):
     data = await client.raw_run_method(method='seqno', stack_data=[], address=address)
